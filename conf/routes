@@ -9,3 +9,46 @@ GET     /products                   controllers.ProductController.getProducts
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+# Own stuff
+
+GET     /product               controllers.ProductController.product
+
+GET     /keyword                controllers.KeywordController.getKeyword
+
+
+#routes stay, their location will change from test
+
+GET     /search-products/:keywords/:categories      controllers.TestController.getSearchProducts(keywords,categories)
+
+GET     /user-sells-products/:userid     controllers.TestController.getUserSellsProducts(userid)
+
+GET     /user-cart-products/:userid     controllers.TestController.getUserCartProducts(userid)
+
+#GET     /comment-product/:commentid     controllers.TestController.getCommentProduct(commentid)
+
+GET     /product-from-id/:id       controllers.TestController.getProductFromId(id)
+
+GET     /comments-from-product/:productid   controllers.TestController.getCommentsFromProduct(productid)
+
+GET     /comments-from-user/:userid         controllers.TestController.getCommentsFromUser(userid)
+
+#GET     /user-from-comment/:commentid       controllers.TestController.getUserFromComment(commentid)
+
+#GET     /user-from-product/:productid       controllers.TestController.getUserFromProduct(productid)
+
+GET     /user-from-id/:id       controllers.TestController.getUserFromId(id)
+
+GET     /orders-sell-from-user/:id       controllers.TestController.getOrdersSellFromUser(id)
+
+GET     /all-categories                     controllers.TestController.getAllCategories
+
+POST /login                      controllers.TestController.login
+POST /logout                      controllers.TestController.logout
+POST /add-to-cart               controllers.TestController.addToCart
+POST /remove-from-cart               controllers.TestController.removeFromCart
+POST /add-comment              controllers.TestController.addComment
+
+POST /register             controllers.TestController.register
+
+GET /buy-cart-user/:id      controllers.TestController.buyCartUser(id)
